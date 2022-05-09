@@ -1,0 +1,37 @@
+h2 {
+    color: green
+  }
+
+  body {
+    background-color: aqua;
+    color: black;
+  }
+
+  h1 {
+    font-family: Arial;
+    color: purple;
+  }
+
+  #Descrição {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  p {
+    font-style: italic;
+  }
+
+  .skill1 {
+    font-size: 20px;
+  }
+
+  .skill2 {
+    font-size: 18px;
+  }
+
+  .skill3 {
+    font-size: 16px;
+  }
+
+  #picture {
+    border-radius: 25%;
+  }66
