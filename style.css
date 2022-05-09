@@ -7,13 +7,11 @@ h2 {
     color: black;
   }
 
-  h1 {
-    font-family: Arial;
-    color: purple;
-  }
-
   #Descrição {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    top: 36%;
+    right: 30%;
   }
 
   p {
@@ -33,5 +31,22 @@ h2 {
   }
 
   #picture {
-    border-radius: 25%;
-  }66
+    float: left;
+    height: 280px;
+    padding: 10px;
+    background-color: lightblue;
+  }
+
+  h1 {
+    text-align: center;
+    color: purple;
+  }
+
+  .pic-container {
+    height: 300px;
+    position: relative;
+  }
+
+  ul li:nth-child(odd) {
+    background-color: lightcyan
+  }
