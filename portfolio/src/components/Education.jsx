@@ -1,6 +1,7 @@
 import React from 'react';
 import {useState} from 'react';
 import {educationData} from '../data/educationData';
+import '../styles/Education.css';
 
 export default function Education() {
   const [object] = useState(educationData);

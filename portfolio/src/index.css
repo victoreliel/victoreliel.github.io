@@ -11,15 +11,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-ul {
-  list-style-type: none;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-}
-
-ul li:not(:last-child) {
-  margin-right: 10px;
-}

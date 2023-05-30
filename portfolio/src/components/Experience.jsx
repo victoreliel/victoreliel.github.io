@@ -1,6 +1,7 @@
 import React from 'react';
 import {useState} from 'react';
 import {experienceData} from '../data/experienceData';
+import '../styles/Experience.css';
 
 export default function Experience() {
   const [objects] = useState(experienceData);

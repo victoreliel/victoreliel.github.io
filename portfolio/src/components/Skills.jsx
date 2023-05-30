@@ -1,6 +1,7 @@
 import React from 'react';
 import {useState} from 'react';
 import {skillsData} from '../data/skillsData';
+import '../styles/Skills.css';
 
 export default function Skills() {
   const [object] = useState(skillsData);

@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {contactsData} from '../data/contactsData';
 import {socialsData} from '../data/socialsData';
+import '../styles/Contacts.css';
 
 export default function Contacts() {
   const [contacts] = useState(contactsData);

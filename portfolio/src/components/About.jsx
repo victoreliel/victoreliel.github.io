@@ -1,5 +1,6 @@
 import React from 'react';
 import aboutData from '../data/aboutData';
+import '../styles/About.css';
 
 export default function About() {
   return (
