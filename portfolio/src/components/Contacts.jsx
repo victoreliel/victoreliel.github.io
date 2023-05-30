@@ -1,16 +1,32 @@
 import React, {useState} from 'react';
 import {contactsData} from '../data/contactsData';
+import {socialsData} from '../data/socialsData';
 
 export default function Contacts() {
-  const [object] = useState(contactsData);
+  const [contacts] = useState(contactsData);
+  const [socials] = useState(socialsData);
 
   return (
     <div id="contacts">
       <h1>Contacts</h1>
-      <a href={object.linkedin}>Meu Perfil no Linkedin</a>
-      <p>{`Email: ${object.email}`}</p>
-      <p>{`Telefone: ${object.phone}`}</p>
-      <p>{`Endereço: ${object.address}`}</p>
+      <p>{`Email: ${contacts.email}`}</p>
+      <p>{`Telefone: ${contacts.phone}`}</p>
+      <p>{`Endereço: ${contacts.address}`}</p>
+      <h2>Socials</h2>
+      <ul>
+        <li>
+          <a href={socials.github}>Github</a>
+        </li>
+        <li>
+          <a href={socials.linkedin}>Linkedin</a>
+        </li>
+        <li>
+          <a href={socials.facebook}>Facebook</a>
+        </li>
+        <li>
+          <a href={socials.instagram}>Instagram</a>
+        </li>
+      </ul>
     </div>
   );
 }
