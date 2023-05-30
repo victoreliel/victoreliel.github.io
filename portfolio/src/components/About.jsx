@@ -1,7 +1,11 @@
-import React from 'react'
+import React from 'react';
+import aboutData from '../data/aboutData';
 
 export default function About() {
   return (
-    <div>About</div>
-  )
+    <div id="about">
+      <h1>About</h1>
+      <p>{aboutData.description1}</p>
+    </div>
+  );
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Navbar from '../components/Navbar';
 import About from '../components/About';
 import Skills from '../components/Skills';
@@ -10,7 +10,7 @@ import Footer from '../components/Footer';
 
 export default function Main() {
   return (
-    <div>
+    <div id="home">
       <Navbar />
       <About />
       <Skills />
@@ -20,5 +20,5 @@ export default function Main() {
       <Contacts />
       <Footer />
     </div>
-  )
+  );
 }

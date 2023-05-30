@@ -1,7 +1,16 @@
-import React from 'react'
+import React from 'react';
+import {useState} from 'react';
+import {skillsData} from '../data/skillsData';
 
 export default function Skills() {
+  const [object] = useState(skillsData);
+
+  const string = Object.values(object).join(', ');
+
   return (
-    <div>Skills</div>
-  )
+    <div id="skills">
+      <h1>Skills</h1>
+      <p>{string}</p>
+    </div>
+  );
 }
