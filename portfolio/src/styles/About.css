@@ -1,0 +1,22 @@
+.about {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.about img {
+  margin-right: 250px;
+  margin-left: 60px;
+  margin-top: 30px;
+}
+
+.pp {
+  border-radius: 50%;
+  width: 350px;
+  height: 350px;
+}
+
+.description {
+  font-size: 18px;
+  margin-right: 60px;
+}

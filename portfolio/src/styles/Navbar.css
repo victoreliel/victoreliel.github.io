@@ -1,3 +1,28 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(233, 173, 53);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(240, 57, 57);
+  font-weight: bold;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.navbar a:hover {
+  transform: scale(1.1);
+}
+
 ul {
   list-style-type: none;
   display: inline-flex;
