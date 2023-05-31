@@ -1,0 +1,9 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  border: 1px solid rgba(105,105,105,.3);
+  border-radius: 15px;
+  margin: 20px 150px 0 150px;
+}

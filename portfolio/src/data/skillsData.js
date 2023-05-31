@@ -4,16 +4,14 @@ export const skillsData = [
   'HTML',
   'CSS',
   'Jest',
-  'Redux',
-  'Hooks',
-  'RTL',
-  'Docker',
-  'MySQL',
-  'NodeJS',
-  'Typescript',
-  'Python',
   'Git',
+  'Redux',
+  'Typescript',
+  'Docker',
+  'NodeJS',
   'MongoDB',
+  'MySQL',
+  'Python',
 ];
 
 export default skillsData;
