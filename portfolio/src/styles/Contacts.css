@@ -9,3 +9,53 @@ ul {
 ul li:not(:last-child) {
   margin-right: 10px;
 }
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  border: 1px solid rgba(105,105,105,.3);
+  border-radius: 15px;
+  margin: 20px 150px 0 150px;
+}
+
+.basic-contact {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.contacts a {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.divisions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+.divisions p {
+  margin: 0 10px 0 10px;
+  font-size: 18px;
+  color: #ffb86c;
+  font-weight: 400;
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+}
+
+.social {
+  margin: 0 10px 0 10px;
+  font-weight: 400;
+}
