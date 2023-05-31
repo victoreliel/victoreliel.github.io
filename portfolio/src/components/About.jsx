@@ -6,11 +6,14 @@ import '../styles/About.css';
 export default function About() {
   return (
     <div id="about" className="about">
-      <img src={ProfilePicture} alt="foto de perfil" className="pp"/>
-      <div>
-        <h3>Full Stack Web Developer</h3>
-        <h1>Victor Eliel</h1>
-        <p className="description">{aboutData.description1}</p>
+      <div className="img-container">
+        <img src={ProfilePicture} alt="foto de perfil" className="pp"/>
+      </div>
+      <div className="vertical-bar"/>
+      <div className="presentation">
+        <p className="name">Victor Eliel Ferranti Macedo</p>
+        <p className="role">Full Stack Web Developer</p>
+        <p>{aboutData.description1}</p>
       </div>
     </div>
   );

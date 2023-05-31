@@ -11,39 +11,39 @@ export default function Navbar() {
   };
 
   return (
-    <nav className='navbar'>
+    <nav className="navbar">
       <ul>
-        <li>
+        <li className="shadow-effect">
           <Link to="/" onClick={() => scrollToAnchor('home')}>
             Home
           </Link>
         </li>
-        <li>
+        <li className="shadow-effect">
           <Link to="/" onClick={() => scrollToAnchor('about')}>
             About
           </Link>
         </li>
-        <li>
+        <li className="shadow-effect">
           <Link to="/" onClick={() => scrollToAnchor('skills')}>
             Skills
           </Link>
         </li>
-        <li>
+        <li className="shadow-effect">
           <Link to="/" onClick={() => scrollToAnchor('projects')}>
             Projetos
           </Link>
         </li>
-        <li>
+        <li className="shadow-effect">
           <Link to="/" onClick={() => scrollToAnchor('education')}>
             Education
           </Link>
         </li>
-        <li>
+        <li className="shadow-effect">
           <Link to="/" onClick={() => scrollToAnchor('experience')}>
             Experience
           </Link>
         </li>
-        <li>
+        <li className="shadow-effect">
           <Link to="/" onClick={() => scrollToAnchor('contacts')}>
             Contacts
           </Link>
