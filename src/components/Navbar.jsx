@@ -1,8 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
+import {socialsData} from '../data/socialsData';
 import '../styles/Navbar.css';
 
 export default function Navbar() {
+  const [socials] = useState(socialsData);
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -54,6 +57,9 @@ export default function Navbar() {
           <Link to="/" onClick={() => scrollToAnchor('contacts')}>
             Contato
           </Link>
+        </li>
+        <li className="shadow-effect">
+          <a href={socials.repository}>Repositório</a>
         </li>
       </ul>
     </nav>
