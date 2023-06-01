@@ -8,10 +8,11 @@ export default function Experience() {
   const [objects] = useState(experienceData);
 
   useEffect(() => {
-    scrollReveal().reveal('.experience-item', {
+    scrollReveal().reveal('.scroll-reveal', {
+      duration: 500,
       distance: '20px',
       origin: 'bottom',
-      duration: 1000,
+      easing: 'ease-in-out',
       delay: 100,
       interval: 200,
       reset: true,
@@ -23,7 +24,7 @@ export default function Experience() {
       <p className="title">Experiência Profissional</p>
       <div className="experiences">
         {objects.map((object) => (
-          <div key={object.id} className="experience-item">
+          <div key={object.id} className="scroll-reveal">
             <p className="company">{object.company}</p>
             <p className="role">{object.jobtitle}</p>
             <p className="job-years">

@@ -19,7 +19,7 @@ export default function Contacts() {
 
   useEffect(() => {
     scrollReveal().reveal('.scroll-reveal', {
-      duration: 1000,
+      duration: 500,
       distance: '20px',
       origin: 'bottom',
       easing: 'ease-in-out',
