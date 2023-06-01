@@ -59,3 +59,13 @@ ul li:not(:last-child) {
   margin: 0 10px 0 10px;
   font-weight: 400;
 }
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.row:not(:last-child) {
+  margin-right: 15px;
+}
