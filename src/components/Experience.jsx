@@ -1,7 +1,6 @@
-import React from 'react';
-import {useState, useEffect} from 'react';
-import {experienceData} from '../data/experienceData';
+import React, { useState, useEffect } from 'react';
 import scrollReveal from 'scrollreveal';
+import { experienceData } from '../data/experienceData';
 import '../styles/Experience.css';
 
 export default function Experience() {
@@ -31,8 +30,8 @@ export default function Experience() {
               {`Ano de Início: ${object.startYear}`}
             </p>
             <p className="job-years">
-              {typeof object.endYear == 'string' ? 'Este é meu trabalho atual' :
-            `Ano de Conclusão: ${object.endYear}`}
+              {typeof object.endYear === 'string' ? 'Este é meu trabalho atual'
+                : `Ano de Conclusão: ${object.endYear}`}
             </p>
           </div>
         ))}

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   AiFillGithub,
   AiFillLinkedin,
@@ -7,10 +7,10 @@ import {
   AiOutlineMail,
   AiFillPhone,
 } from 'react-icons/ai';
-import {SiGooglemaps} from 'react-icons/si';
-import {contactsData} from '../data/contactsData';
-import {socialsData} from '../data/socialsData';
+import { SiGooglemaps } from 'react-icons/si';
 import scrollReveal from 'scrollreveal';
+import { contactsData } from '../data/contactsData';
+import { socialsData } from '../data/socialsData';
 import '../styles/Contacts.css';
 
 export default function Contacts() {
@@ -34,40 +34,40 @@ export default function Contacts() {
       <p className="title">Contato</p>
       <div className="basic-contact">
         <div className="divisions scroll-reveal">
-          <AiOutlineMail/>
+          <AiOutlineMail />
           <p>{contacts.email}</p>
         </div>
         <div className="divisions scroll-reveal">
-          <AiFillPhone/>
+          <AiFillPhone />
           <p>{contacts.phone}</p>
         </div>
         <div className="divisions scroll-reveal">
-          <SiGooglemaps/>
+          <SiGooglemaps />
           <p>{contacts.address}</p>
         </div>
       </div>
       <p className="title">Redes Sociais</p>
       <ul className="socials">
         <div className="scroll-reveal row">
-          <AiFillGithub/>
+          <AiFillGithub />
           <li>
             <a href={socials.github} className="social">Github</a>
           </li>
         </div>
         <div className="scroll-reveal row">
-          <AiFillLinkedin/>
+          <AiFillLinkedin />
           <li>
             <a href={socials.linkedin} className="social">Linkedin</a>
           </li>
         </div>
         <div className="scroll-reveal row">
-          <AiFillFacebook/>
+          <AiFillFacebook />
           <li>
             <a href={socials.facebook} className="social">Facebook</a>
           </li>
         </div>
         <div className="scroll-reveal row">
-          <AiFillInstagram/>
+          <AiFillInstagram />
           <li>
             <a href={socials.instagram} className="social">Instagram</a>
           </li>

@@ -1,7 +1,6 @@
-import React from 'react';
-import {useState, useEffect} from 'react';
-import {educationData} from '../data/educationData';
+import React, { useState, useEffect } from 'react';
 import scrollReveal from 'scrollreveal';
+import { educationData } from '../data/educationData';
 import '../styles/Education.css';
 
 export default function Education() {

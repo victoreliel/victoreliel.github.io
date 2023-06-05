@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
-import {Link} from 'react-router-dom';
-import {socialsData} from '../data/socialsData';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { socialsData } from '../data/socialsData';
 import '../styles/Navbar.css';
 
 export default function Navbar() {
@@ -16,7 +16,7 @@ export default function Navbar() {
   const scrollToAnchor = (anchor) => {
     const element = document.getElementById(anchor);
     if (element) {
-      element.scrollIntoView({behavior: 'smooth'});
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   };
 

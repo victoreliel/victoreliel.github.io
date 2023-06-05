@@ -1,8 +1,7 @@
-import React from 'react';
-import {useEffect} from 'react';
-import softSkillsData from '../data/softSkillsData';
-import technologiesIcons from '../helpers/technologies';
+import React, { useEffect } from 'react';
 import scrollReveal from 'scrollreveal';
+import { softSkillsData } from '../data/softSkillsData';
+import technologiesIcons from '../helpers/technologies';
 import '../styles/Skills.css';
 
 export default function Skills() {
