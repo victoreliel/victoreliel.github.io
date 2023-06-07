@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
-import Navbar from '../components/Navbar';
 import About from '../components/About';
 import Skills from '../components/Skills';
 import Projects from '../components/Projects';
@@ -15,7 +14,6 @@ export default function Main() {
 
   return (
     <div id="home" className={`main ${theme === 'light' ? 'light' : 'dark'}`}>
-      <Navbar />
       <About />
       <Skills />
       <Projects />

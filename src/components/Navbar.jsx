@@ -56,7 +56,7 @@ export default function Navbar() {
         </li>
         <li className="shadow-effect">
           <Link to="/" onClick={() => scrollToAnchor('experience')}>
-            Experiência Profissional
+            Experiência
           </Link>
         </li>
         <li className="shadow-effect">
