@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { ThemeContext } from '../context/ThemeContext';
 import { socialsData } from '../data/socialsData';
 import '../styles/Navbar.css';
 
 export default function Navbar() {
   const [socials] = useState(socialsData);
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -21,7 +23,11 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${theme === 'light' ? 'light' : 'dark'}`}>
+      <button type="button" onClick={toggleTheme} className={`theme-switch ${theme}`}>
+        <span className="switch-text">{theme === 'light' ? 'Modo Escuro' : 'Modo Claro'}</span>
+        <span className="switch-slider" />
+      </button>
       <ul>
         <li className="shadow-effect">
           <Link to="/" onClick={() => scrollToTop()}>
