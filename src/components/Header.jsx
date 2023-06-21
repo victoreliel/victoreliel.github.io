@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { BsFillMoonFill, BsFillSunFill } from 'react-icons/bs';
 import { ThemeContext } from '../context/ThemeContext';
 import '../styles/Main.css';
 
@@ -12,21 +13,21 @@ export default function Header() {
     } header-container`}
     >
       <div className="flex justify-between items-center">
-        <div>
+        <div className="flex justify-around items-center">
           <button
             type="button"
             onClick={toggleTheme}
-            className={`bg-gray-200 text-gray-800 rounded-full py-2 px-4 relative transition-colors duration-300 ${
-              theme === 'light' ? 'dark:bg-gray-800' : 'bg-gray-200'
+            className={`h-8 w-16 bg-gray-200 text-gray-800 rounded-full py-2 px-4 relative transition-colors duration-300 mr-4 ${
+              theme === 'light' ? 'bg-gray-200' : 'bg-gray-600'
             }`}
           >
             <span
               className={`absolute left-0 top-0 h-full w-1/2 bg-white rounded-full transition-transform duration-300 ${
-                theme === 'light' ? 'transform translate-x-0' : 'transform translate-x-full'
+                theme === 'light' ? 'transform translate-x-0 bg-gray-400' : 'transform translate-x-full bg-gray-200'
               }`}
             />
-            <span>{theme === 'light' ? 'Modo Escuro' : 'Modo Claro'}</span>
           </button>
+          {theme === 'light' ? <BsFillMoonFill /> : <BsFillSunFill />}
         </div>
 
         <div className="flex space-x-4">
@@ -43,7 +44,7 @@ export default function Header() {
               type="button"
               className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg"
             >
-              Projects
+              Projetos
             </button>
           </Link>
         </div>
