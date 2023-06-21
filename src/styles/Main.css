@@ -1,9 +1,13 @@
-light {
+.light {
   background-color: #FAFAFA;
-  color: #555;
+  color: #242424;
 }
 
 .dark {
-  background-color: #333;
+  background-color: #111827;
   color: #FAFAFA;
+}
+
+.header-container {
+  z-index: 9999;
 }

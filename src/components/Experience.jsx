@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import scrollReveal from 'scrollreveal';
 import { experienceData } from '../data/experienceData';
-import '../styles/Experience.css';
 
 export default function Experience() {
   const [objects] = useState(experienceData);
@@ -19,19 +18,18 @@ export default function Experience() {
   }, []);
 
   return (
-    <div id="experience" className="experience">
-      <p className="title">Experiência Profissional</p>
-      <div className="experiences">
+    <div id="experience" className="p-8 border border-gray-300 rounded-lg my-8 mx-28">
+      <p className="text-xl font-bold mb-4">Experiência Profissional</p>
+      <div className="flex flex-wrap justify-center">
         {objects.map((object) => (
-          <div key={object.id} className="scroll-reveal">
-            <p className="company">{object.company}</p>
-            <p className="role">{object.jobtitle}</p>
-            <p className="job-years">
+          <div key={object.id} className="scroll-reveal p-4">
+            <p className="text-red-500 text-lg font-medium">{object.company}</p>
+            <p className="text-base">{object.jobtitle}</p>
+            <p className="text-sm opacity-75">
               {`Ano de Início: ${object.startYear}`}
             </p>
-            <p className="job-years">
-              {typeof object.endYear === 'string' ? 'Este é meu trabalho atual'
-                : `Ano de Conclusão: ${object.endYear}`}
+            <p className="text-sm opacity-75">
+              {typeof object.endYear === 'string' ? 'Este é meu trabalho atual' : `Ano de Conclusão: ${object.endYear}`}
             </p>
           </div>
         ))}

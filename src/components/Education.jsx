@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import scrollReveal from 'scrollreveal';
 import { educationData } from '../data/educationData';
-import '../styles/Education.css';
 
 export default function Education() {
   const [object] = useState(educationData);
@@ -19,14 +18,13 @@ export default function Education() {
   }, []);
 
   return (
-    <div id="education" className="education">
-      <p className="title">Formação</p>
-      <p className="course scroll-reveal">{object.institution}</p>
-      <p className="subtitle scroll-reveal">{object.course}</p>
-      <p className="description scroll-reveal">{object.description}</p>
-      <p className="description scroll-reveal">
-        {`Comecei o curso em abril de ${object.startYear} e concluí em maio de 
-        ${object.endYear}`}
+    <div id="education" className="p-8 border border-gray-300 rounded-lg my-8 mx-28">
+      <p className="text-xl font-bold mb-4">Formação</p>
+      <p className="text-green-500 text-lg font-medium scroll-reveal">{object.institution}</p>
+      <p className="text-base scroll-reveal">{object.course}</p>
+      <p className="text-base scroll-reveal">{object.description}</p>
+      <p className="text-base scroll-reveal">
+        {`Comecei o curso em abril de ${object.startYear} e concluí em maio de ${object.endYear}`}
       </p>
     </div>
   );

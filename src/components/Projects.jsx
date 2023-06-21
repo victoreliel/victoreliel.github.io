@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { AiOutlineLink } from 'react-icons/ai';
 import scrollReveal from 'scrollreveal';
 import { projectsData } from '../data/projectsData';
-import '../styles/Projects.css';
 
 export default function Projects() {
   useEffect(() => {
@@ -18,38 +18,33 @@ export default function Projects() {
   }, []);
 
   return (
-    <div id="projects" className="projects">
-      <p className="title">Projetos</p>
-      <div className="projects-container scroll-reveal">
+    <div id="projects" className="p-8 border border-gray-300 rounded-lg my-8 mx-28">
+      <p className="text-xl font-bold mb-4">Projetos Principais</p>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 scroll-reveal">
         {projectsData.map((project) => (
-          <div className="project-card" key={project.id}>
-            <p className="project-name subtitle">{project.name}</p>
-            <p className="project-description">{project.description}</p>
-            <div className="link">
-              <AiOutlineLink />
-              <a
-                href={project.repository}
-                target="_blank"
-                className="project-link"
-                rel="noreferrer"
-              >
+          <div className="border border-gray-300 rounded-lg p-4 hover:scale-105 transition-transform" key={project.id}>
+            <p className="text-lg font-semibold mb-2">{project.name}</p>
+            <p className="mb-4">{project.description}</p>
+            <div className="flex items-center mb-4">
+              <AiOutlineLink className="mr-2" />
+              <a href={project.repository} target="_blank" rel="noreferrer" className="text-blue-500">
                 Link do Repositório
               </a>
             </div>
-            <div className="link">
-              <AiOutlineLink />
-              <a
-                href={project.demo}
-                target="_blank"
-                className="project-link"
-                rel="noreferrer"
-              >
+            <div className="flex items-center">
+              <AiOutlineLink className="mr-2" />
+              <a href={project.demo} target="_blank" rel="noreferrer" className="text-blue-500">
                 Demonstração do Projeto
               </a>
             </div>
-            <img className="project-image" src={project.image} alt="Imagem do Projeto" />
+            <img className="w-full h-48 object-cover rounded-lg mt-4" src={project.image} alt="Imagem do Projeto" />
           </div>
         ))}
+      </div>
+      <div className="flex justify-center mt-4">
+        <Link to="/projects" className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg">
+          Ver Todos os Projetos
+        </Link>
       </div>
     </div>
   );

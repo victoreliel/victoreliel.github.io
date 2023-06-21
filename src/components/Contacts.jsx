@@ -1,24 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import {
-  AiFillGithub,
-  AiFillLinkedin,
-  AiFillFacebook,
-  AiFillInstagram,
-  AiOutlineMail,
-  AiFillPhone,
-} from 'react-icons/ai';
+import React, { useEffect } from 'react';
+import { AiOutlineMail, AiFillPhone } from 'react-icons/ai';
 import { SiGooglemaps } from 'react-icons/si';
 import scrollReveal from 'scrollreveal';
 import { contactsData } from '../data/contactsData';
-import { socialsData } from '../data/socialsData';
-import '../styles/Contacts.css';
 
 export default function Contacts() {
-  const [contacts] = useState(contactsData);
-  const [socials] = useState(socialsData);
+  const contacts = contactsData;
 
   useEffect(() => {
-    scrollReveal().reveal('.scroll-reveal', {
+    const sr = scrollReveal();
+    sr.reveal('.scroll-reveal', {
       duration: 500,
       distance: '20px',
       origin: 'bottom',
@@ -29,50 +20,35 @@ export default function Contacts() {
     });
   }, []);
 
+  const isLargeScreen = window.matchMedia('(min-width: 768px)').matches;
+
   return (
-    <div id="contacts" className="contacts">
-      <p className="title">Contato</p>
-      <div className="basic-contact">
-        <div className="divisions scroll-reveal">
-          <AiOutlineMail />
-          <p>{contacts.email}</p>
-        </div>
-        <div className="divisions scroll-reveal">
-          <AiFillPhone />
-          <p>{contacts.phone}</p>
-        </div>
-        <div className="divisions scroll-reveal">
-          <SiGooglemaps />
-          <p>{contacts.address}</p>
-        </div>
+    <div id="contacts" className="p-8 border border-gray-300 rounded-lg my-8 mx-28">
+      <p className="text-xl font-bold mb-4">Contato</p>
+      <div className={`flex ${isLargeScreen ? 'flex-wrap justify-center' : 'flex-col items-center'} gap-4 ${isLargeScreen ? 'scroll-reveal' : ''}`}>
+        {Object.entries(contacts).map(([key, value]) => (
+          <div key={key} className={`${isLargeScreen ? 'scroll-reveal' : ''}`}>
+            {key === 'email' && (
+            <div className="flex items-center">
+              <AiOutlineMail className="inline-block text-2xl mr-2" />
+              <p className="text-lg text-red-500 font-medium">{value}</p>
+            </div>
+            )}
+            {key === 'phone' && (
+            <div className="flex items-center">
+              <AiFillPhone className="inline-block text-2xl mr-2" />
+              <p className="text-lg text-red-500 font-medium">{value}</p>
+            </div>
+            )}
+            {key === 'address' && (
+            <div className="flex items-center">
+              <SiGooglemaps className="inline-block text-2xl mr-2" />
+              <p className="text-lg text-red-500 font-medium">{value}</p>
+            </div>
+            )}
+          </div>
+        ))}
       </div>
-      <p className="title">Redes Sociais</p>
-      <ul className="socials">
-        <div className="scroll-reveal row">
-          <AiFillGithub />
-          <li>
-            <a href={socials.github} className="social">Github</a>
-          </li>
-        </div>
-        <div className="scroll-reveal row">
-          <AiFillLinkedin />
-          <li>
-            <a href={socials.linkedin} className="social">Linkedin</a>
-          </li>
-        </div>
-        <div className="scroll-reveal row">
-          <AiFillFacebook />
-          <li>
-            <a href={socials.facebook} className="social">Facebook</a>
-          </li>
-        </div>
-        <div className="scroll-reveal row">
-          <AiFillInstagram />
-          <li>
-            <a href={socials.instagram} className="social">Instagram</a>
-          </li>
-        </div>
-      </ul>
     </div>
   );
 }
