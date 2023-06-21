@@ -3,7 +3,22 @@ import scrollReveal from 'scrollreveal';
 import { educationData } from '../data/educationData';
 
 export default function Education() {
-  const [object] = useState(educationData);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [education] = useState(educationData);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const isMobile = windowWidth <= 768;
 
   useEffect(() => {
     scrollReveal().reveal('.scroll-reveal', {
@@ -18,13 +33,13 @@ export default function Education() {
   }, []);
 
   return (
-    <div id="education" className="p-8 border border-gray-300 rounded-lg my-8 mx-28">
+    <div id="education" className="p-8 border border-gray-300 rounded-lg my-8 mx-4 md:mx-28">
       <p className="text-xl font-bold mb-4">Formação</p>
-      <p className="text-green-500 text-lg font-medium scroll-reveal">{object.institution}</p>
-      <p className="text-base scroll-reveal">{object.course}</p>
-      <p className="text-base scroll-reveal">{object.description}</p>
+      <p className="text-green-500 text-lg font-medium scroll-reveal">{education.institution}</p>
+      <p className={`text-base scroll-reveal ${isMobile ? 'mb-2' : ''}`}>{education.course}</p>
+      <p className={`text-base scroll-reveal ${isMobile ? 'mb-2' : ''}`}>{education.description}</p>
       <p className="text-base scroll-reveal">
-        {`Comecei o curso em abril de ${object.startYear} e concluí em maio de ${object.endYear}`}
+        {`Comecei o curso em abril de ${education.startYear} e concluí em maio de ${education.endYear}`}
       </p>
     </div>
   );
