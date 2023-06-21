@@ -3,19 +3,17 @@ import React from 'react';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
-import Navbar from './components/Navbar';
 import Main from './pages/Main';
+import Projects from './pages/Projects';
 
 export default function App() {
   return (
     <ThemeProvider>
       <div className="app-container">
-        <Navbar />
-        <div className="content-container">
-          <Routes>
-            <Route path="/" element={<Main />} />
-          </Routes>
-        </div>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/projects" element={<Projects />} />
+        </Routes>
       </div>
     </ThemeProvider>
   );
