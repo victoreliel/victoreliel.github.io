@@ -36,7 +36,7 @@ export default function Projects() {
   return (
     <div id="projects" className="p-8 border border-gray-300 rounded-lg my-8 mx-4 md:mx-28">
       <p className="text-xl font-bold mb-4">Projetos Principais</p>
-      <div className={`grid ${isMobile ? 'grid-cols-1' : 'grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'} gap-8 scroll-reveal`}>
+      <div className={`grid ${isMobile ? 'grid-cols-1' : 'grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 scroll-reveal'} gap-8`}>
         {projectsData.map((project) => (
           <div className="border border-gray-300 rounded-lg p-4 hover:scale-105 transition-transform" key={project.id}>
             <p className="text-lg font-semibold mb-2">{project.name}</p>
