@@ -35,10 +35,10 @@ export default function Education() {
   return (
     <div id="education" className="p-8 border border-gray-300 rounded-lg my-8 mx-4 md:mx-28">
       <p className="text-xl font-bold mb-4">Formação</p>
-      <p className="text-green-500 text-lg font-medium scroll-reveal">{education.institution}</p>
-      <p className={`text-base scroll-reveal ${isMobile ? 'mb-2' : ''}`}>{education.course}</p>
-      <p className={`text-base scroll-reveal ${isMobile ? 'mb-2' : ''}`}>{education.description}</p>
-      <p className="text-base scroll-reveal">
+      <p className={`text-green-500 text-lg font-medium ${!isMobile ? 'scroll-reveal' : ''}`}>{education.institution}</p>
+      <p className={`text-base ${isMobile ? 'mb-2' : 'scroll-reveal'}`}>{education.course}</p>
+      <p className={`text-base ${isMobile ? 'mb-2' : 'scroll-reveal'}`}>{education.description}</p>
+      <p className={`text-base ${!isMobile ? 'scroll-reveal' : ''}`}>
         {`Comecei o curso em abril de ${education.startYear} e concluí em maio de ${education.endYear}`}
       </p>
     </div>

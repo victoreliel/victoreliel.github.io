@@ -37,7 +37,7 @@ export default function Skills() {
       <p className="text-xl font-bold mb-4">Skills</p>
       <div className={`flex flex-wrap ${isMobile ? 'justify-center' : 'justify-evenly'}`}>
         {skillsData.map((technology) => (
-          <div key={technology} className={`m-2 flex items-center ${isMobile ? 'w-1/4' : ''}`}>
+          <div key={technology} className={`m-2 flex items-center ${isMobile ? 'w-1/4' : 'scroll-reveal'}`}>
             <div className="opacity-80 hover:opacity-100 transition-opacity duration-300">
               {technologiesIcons(technology)}
             </div>

@@ -37,7 +37,7 @@ export default function Experience() {
       <p className="text-xl font-bold mb-4">Experiência Profissional</p>
       <div className="flex flex-wrap justify-center">
         {experienceList.map((experience) => (
-          <div key={experience.id} className={`scroll-reveal p-4 ${isMobile ? 'mb-4' : ''}`}>
+          <div key={experience.id} className={`p-4 ${isMobile ? 'mb-4' : 'scroll-reveal'}`}>
             <p className="text-red-500 text-lg font-medium">{experience.company}</p>
             <p className={`text-base ${isMobile ? 'mb-2' : ''}`}>{experience.jobtitle}</p>
             <p className="text-sm opacity-75">{`Ano de Início: ${experience.startYear}`}</p>
