@@ -1,10 +1,9 @@
 import React from 'react';
-import '../styles/Footer.css';
 
 export default function Footer() {
   return (
-    <div id="footer" className="footer">
-      <p className="description">
+    <div id="footer" className="flex justify-center p-4">
+      <p>
         Site construído por Victor Eliel Ferranti Macedo
       </p>
     </div>

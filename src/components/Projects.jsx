@@ -1,10 +1,26 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AiOutlineLink } from 'react-icons/ai';
 import scrollReveal from 'scrollreveal';
 import { projectsData } from '../data/projectsData';
 
 export default function Projects() {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const isMobile = windowWidth <= 768;
+
   useEffect(() => {
     scrollReveal().reveal('.scroll-reveal', {
       duration: 500,
@@ -18,9 +34,9 @@ export default function Projects() {
   }, []);
 
   return (
-    <div id="projects" className="p-8 border border-gray-300 rounded-lg my-8 mx-28">
+    <div id="projects" className="p-8 border border-gray-300 rounded-lg my-8 mx-4 md:mx-28">
       <p className="text-xl font-bold mb-4">Projetos Principais</p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 scroll-reveal">
+      <div className={`grid ${isMobile ? 'grid-cols-1' : 'grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'} gap-8 scroll-reveal`}>
         {projectsData.map((project) => (
           <div className="border border-gray-300 rounded-lg p-4 hover:scale-105 transition-transform" key={project.id}>
             <p className="text-lg font-semibold mb-2">{project.name}</p>
@@ -37,7 +53,7 @@ export default function Projects() {
                 Demonstração do Projeto
               </a>
             </div>
-            <img className="w-full h-48 object-cover rounded-lg mt-4" src={project.image} alt="Imagem do Projeto" />
+            <img className={`w-full h-48 object-cover rounded-lg mt-4 ${isMobile ? 'hidden' : ''}`} src={project.image} alt="Imagem do Projeto" />
           </div>
         ))}
       </div>

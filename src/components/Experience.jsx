@@ -3,7 +3,22 @@ import scrollReveal from 'scrollreveal';
 import { experienceData } from '../data/experienceData';
 
 export default function Experience() {
-  const [objects] = useState(experienceData);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [experienceList] = useState(experienceData);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const isMobile = windowWidth <= 768;
 
   useEffect(() => {
     scrollReveal().reveal('.scroll-reveal', {
@@ -18,18 +33,18 @@ export default function Experience() {
   }, []);
 
   return (
-    <div id="experience" className="p-8 border border-gray-300 rounded-lg my-8 mx-28">
+    <div id="experience" className="p-8 border border-gray-300 rounded-lg my-8 mx-4 md:mx-28">
       <p className="text-xl font-bold mb-4">Experiência Profissional</p>
       <div className="flex flex-wrap justify-center">
-        {objects.map((object) => (
-          <div key={object.id} className="scroll-reveal p-4">
-            <p className="text-red-500 text-lg font-medium">{object.company}</p>
-            <p className="text-base">{object.jobtitle}</p>
+        {experienceList.map((experience) => (
+          <div key={experience.id} className={`scroll-reveal p-4 ${isMobile ? 'mb-4' : ''}`}>
+            <p className="text-red-500 text-lg font-medium">{experience.company}</p>
+            <p className={`text-base ${isMobile ? 'mb-2' : ''}`}>{experience.jobtitle}</p>
+            <p className="text-sm opacity-75">{`Ano de Início: ${experience.startYear}`}</p>
             <p className="text-sm opacity-75">
-              {`Ano de Início: ${object.startYear}`}
-            </p>
-            <p className="text-sm opacity-75">
-              {typeof object.endYear === 'string' ? 'Este é meu trabalho atual' : `Ano de Conclusão: ${object.endYear}`}
+              {typeof experience.endYear === 'string'
+                ? 'Este é meu trabalho atual'
+                : `Ano de Conclusão: ${experience.endYear}`}
             </p>
           </div>
         ))}
