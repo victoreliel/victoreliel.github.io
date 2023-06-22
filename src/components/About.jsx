@@ -54,16 +54,16 @@ export default function About() {
           <p className="text-2xl font-semibold mb-2">Victor Eliel Ferranti Macedo</p>
           <p className="text-lg text-red-600 font-medium mb-4">Full Stack Web Developer</p>
           <p className="mb-4">{aboutData.description1}</p>
-          <div className="flex flex-col md:flex-row">
+          <div className="flex flex-col md:flex-row justify-between">
             <div className="flex items-center text-lg mb-2 md:mb-0">
               <AiOutlineCloudDownload className="mr-2" />
-              <a href={curriculum} download className="text-red-600">Baixar Currículo</a>
+              <a href={curriculum} download className="text-red-600 transform hover:scale-110 transition-all duration-300">Baixar Currículo</a>
             </div>
             <div className="flex items-center mt-2 md:mt-0 md:ml-4">
               {socialsData.map((social, index) => (
                 <React.Fragment key={social.id}>
                   {index !== 0 && <div className="mx-2 h-5 border-l border-gray-400" />}
-                  <a href={social.link} className="ml-2" target="_blank" rel="noopener noreferrer">
+                  <a href={social.link} className="ml-2 transform hover:scale-125 transition-all duration-300" target="_blank" rel="noopener noreferrer">
                     {renderSocialIcon(social.id)}
                   </a>
                 </React.Fragment>

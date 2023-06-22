@@ -6,7 +6,6 @@ import { contactsData } from '../data/contactsData';
 
 export default function Contacts() {
   const contacts = contactsData;
-
   useEffect(() => {
     const handleResize = () => {
       scrollReveal().sync();

@@ -33,14 +33,18 @@ export default function Projects() {
     });
   }, []);
 
+  const previewProjects = projectsData.slice(0, 2);
+
   return (
     <div id="projects" className="p-8 border border-gray-300 rounded-lg my-8 mx-4 md:mx-28">
       <p className="text-xl font-bold mb-4">Projetos Principais</p>
       <div className={`grid ${isMobile ? 'grid-cols-1' : 'grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 scroll-reveal'} gap-8`}>
-        {projectsData.map((project) => (
-          <div className="border border-gray-300 rounded-lg p-4 hover:scale-105 transition-transform" key={project.id}>
-            <p className="text-lg font-semibold mb-2">{project.name}</p>
-            <p className="mb-4">{project.description}</p>
+        {previewProjects.map((project) => (
+          <div className="flex flex-col justify-between border border-gray-300 rounded-lg p-4 hover:scale-105 transition-transform" key={project.id}>
+            <div>
+              <p className="text-lg font-semibold mb-2">{project.name}</p>
+              <p className="mb-4">{project.description}</p>
+            </div>
             <div className="flex items-center mb-4">
               <AiOutlineLink className="mr-2" />
               <a href={project.repository} target="_blank" rel="noreferrer" className="text-blue-500">
