@@ -56,7 +56,7 @@ export default function Projects() {
               <div className="flex items-center">
                 <AiOutlineLink className="mr-2" />
                 <a href={project.demo} target="_blank" rel="noreferrer" className="text-blue-500">
-                  Demonstração do Projeto
+                  {project.demo === '' ? 'Demonstração ainda não disponível' : 'Demonstração do Projeto'}
                 </a>
               </div>
               <img className={`w-full h-48 object-cover rounded-lg mt-4 ${isMobile ? 'hidden' : ''}`} src={project.image} alt="Imagem do Projeto" />
