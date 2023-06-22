@@ -33,7 +33,7 @@ export default function Projects() {
     });
   }, []);
 
-  const previewProjects = projectsData.slice(0, 2);
+  const previewProjects = projectsData.slice(0, 4);
 
   return (
     <div id="projects" className="p-8 border border-gray-300 rounded-lg my-8 mx-4 md:mx-28">
@@ -54,7 +54,7 @@ export default function Projects() {
             <div className="flex items-center">
               <AiOutlineLink className="mr-2" />
               <a href={project.demo} target="_blank" rel="noreferrer" className="text-blue-500">
-                Demonstração do Projeto
+                {project.demo === '' ? 'Demonstração ainda não disponível' : 'Demonstração do Projeto'}
               </a>
             </div>
             <img className={`w-full h-48 object-cover rounded-lg mt-4 ${isMobile ? 'hidden' : ''}`} src={project.image} alt="Imagem do Projeto" />

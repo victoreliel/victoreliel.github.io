@@ -36,9 +36,9 @@ export default function Projects() {
   }, []);
 
   return (
-    <div id="projects" className={`projects ${theme === 'light' ? 'light' : 'dark'}`} style={{ height: '100vh' }}>
+    <div id="projects" className={`projects ${theme === 'light' ? 'light' : 'dark'}`} style={{ height: '100%' }}>
       <Header />
-      <div className="p-8 pt-24 border border-gray-300 rounded-lg my-8 mx-4 md:mx-28">
+      <div className="p-8 pt-24 mb-0 border border-gray-300 rounded-lg my-8 mx-4 md:mx-28">
         <p className="text-xl font-bold mb-4">Todos os Projetos</p>
         <div className={`grid ${isMobile ? 'grid-cols-1' : 'grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 scroll-reveal'} gap-8`}>
           {projectsData.map((project) => (
