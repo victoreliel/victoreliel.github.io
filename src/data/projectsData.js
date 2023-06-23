@@ -1,6 +1,8 @@
 import trybetunes from '../assets/projects-pages/trybetunes.png';
 import tryunfo from '../assets/projects-pages/tryunfo.png';
 import solarsystem from '../assets/projects-pages/solarsystem.png';
+import trybewarts from '../assets/projects-pages/trybewarts.png';
+import shoppingcart from '../assets/projects-pages/shoppingcart.png';
 
 export const projectsData = [
   {
@@ -49,7 +51,7 @@ export const projectsData = [
     name: 'Star Wars Planets Search',
     description: 'Aplicação capaz de pesquisar planetas do universo de Star Wars',
     repository: 'https://github.com/victoreliel/starwars-planets-search',
-    demo: '',
+    demo: 'https://starwarsplanetssearch-vefm.vercel.app/',
     image: '',
   },
   {
@@ -57,15 +59,15 @@ export const projectsData = [
     name: 'Shopping Cart',
     description: 'Aplicação que utiliza a API do mercado livre para simular um carrinho de compras',
     repository: 'https://github.com/victoreliel/shopping-cart',
-    demo: '',
-    image: '',
+    demo: 'https://shoppingcart-vefm.vercel.app/',
+    image: shoppingcart,
   },
   {
     id: 8,
     name: 'Front-end Online Store',
     description: 'Aplicação que também utiliza a API do mercado livre porém muito mais completa, simulando a loja inteira',
     repository: 'https://github.com/victoreliel/frontend-online-store',
-    demo: '',
+    demo: 'https://frontendonlinestore-vefm.vercel.app/',
     image: '',
   },
   {
@@ -73,7 +75,7 @@ export const projectsData = [
     name: 'Trivia',
     description: 'Aplicação capaz de simular um jogo de trivia',
     repository: 'https://github.com/victoreliel/trivia',
-    demo: '',
+    demo: 'https://trivia-vefm.vercel.app/',
     image: '',
   },
   {
@@ -81,7 +83,7 @@ export const projectsData = [
     name: 'TrybeWallet',
     description: 'Aplicação que entrega uma carteira de controle de gastos com conversor de moedas',
     repository: 'https://github.com/victoreliel/trybewallet',
-    demo: '',
+    demo: 'https://trybewallet-vefm.vercel.app/',
     image: '',
   },
   {
@@ -105,15 +107,15 @@ export const projectsData = [
     name: 'TrybeWarts',
     description: 'Aplicação de javascript puro com um formulário da Escola de Magia de Trybewarts',
     repository: 'https://github.com/victoreliel/trybewarts',
-    demo: '',
-    image: '',
+    demo: 'https://trybewarts-vefm.vercel.app/',
+    image: trybewarts,
   },
   {
     id: 14,
     name: 'Pixels Art',
     description: 'Editor de arte com pixels em que a pessoa usuária poderá escolher uma cor em uma paleta de cores e pintar o que quiser em um quadro branco',
     repository: 'https://github.com/victoreliel/pixels-art',
-    demo: '',
+    demo: 'https://pixelsart-vefm.vercel.app/',
     image: '',
   },
 ];

@@ -22,7 +22,7 @@ export default function Skills() {
 
   useEffect(() => {
     scrollReveal().reveal('.scroll-reveal', {
-      duration: 500,
+      duration: 250,
       distance: '20px',
       origin: 'left',
       easing: 'ease-in-out',
