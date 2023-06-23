@@ -44,11 +44,20 @@ export default function About() {
   const isMobile = windowWidth <= 768;
 
   return (
-    <div id="about" className="p-8 pt-24 border border-gray-300 rounded-lg mx-4 md:mx-28">
+    <div
+      id="about"
+      className="p-8 pt-24 border border-gray-300 rounded-lg mx-4 md:mx-28"
+    >
       <p className="text-xl font-bold mb-4">Sobre Mim</p>
-      <div className="flex flex-col md:flex-row items-center justify-center md:justify-start">
+      <div
+        className="flex flex-col md:flex-row items-center justify-center md:justify-start"
+      >
         {!isMobile && (
-          <img src={ProfilePicture} alt="foto de perfil" className="pp w-48 h-48 rounded-full mb-6 md:mb-0" />
+          <img
+            src={ProfilePicture}
+            alt="foto de perfil"
+            className="pp w-48 h-48 rounded-full mb-6 md:mb-0"
+          />
         )}
         <div className="md:ml-8">
           <p className="text-2xl font-semibold mb-2">Victor Eliel Ferranti Macedo</p>
@@ -57,13 +66,24 @@ export default function About() {
           <div className="flex flex-col md:flex-row justify-between">
             <div className="flex items-center text-lg mb-2 md:mb-0">
               <AiOutlineCloudDownload className="mr-2" />
-              <a href={curriculum} download className="text-red-600 transform hover:scale-110 transition-all duration-300">Baixar Currículo</a>
+              <a
+                href={curriculum}
+                download
+                className="text-red-600 transform hover:scale-110 transition-all duration-300"
+              >
+                Baixar Currículo
+              </a>
             </div>
             <div className="flex items-center mt-2 md:mt-0 md:ml-4">
               {socialsData.map((social, index) => (
                 <React.Fragment key={social.id}>
                   {index !== 0 && <div className="mx-2 h-5 border-l border-gray-400" />}
-                  <a href={social.link} className="ml-2 transform hover:scale-125 transition-all duration-300" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={social.link}
+                    className="ml-2 transform hover:scale-125 transition-all duration-300"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     {renderSocialIcon(social.id)}
                   </a>
                 </React.Fragment>

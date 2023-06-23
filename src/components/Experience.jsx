@@ -33,14 +33,26 @@ export default function Experience() {
   }, []);
 
   return (
-    <div id="experience" className="p-8 border border-gray-300 rounded-lg my-8 mx-4 md:mx-28">
+    <div
+      id="experience"
+      className="p-8 border border-gray-300 rounded-lg my-8 mx-4 md:mx-28"
+    >
       <p className="text-xl font-bold mb-4">Experiência Profissional</p>
       <div className="flex flex-wrap justify-center">
         {experienceList.map((experience) => (
-          <div key={experience.id} className={`p-4 ${isMobile ? 'mb-4' : 'scroll-reveal'}`}>
-            <p className="text-red-500 text-lg font-medium">{experience.company}</p>
-            <p className={`text-base ${isMobile ? 'mb-2' : ''}`}>{experience.jobtitle}</p>
-            <p className="text-sm opacity-75">{`Ano de Início: ${experience.startYear}`}</p>
+          <div
+            key={experience.id}
+            className={`p-4 ${isMobile ? 'mb-4' : 'scroll-reveal'}`}
+          >
+            <p className="text-red-500 text-lg font-medium">
+              {experience.company}
+            </p>
+            <p className={`text-base ${isMobile ? 'mb-2' : ''}`}>
+              {experience.jobtitle}
+            </p>
+            <p className="text-sm opacity-75">
+              {`Ano de Início: ${experience.startYear}`}
+            </p>
             <p className="text-sm opacity-75">
               {typeof experience.endYear === 'string'
                 ? 'Este é meu trabalho atual'

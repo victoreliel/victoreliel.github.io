@@ -29,7 +29,6 @@ export default function Header() {
           </button>
           {theme === 'light' ? <BsFillMoonFill /> : <BsFillSunFill />}
         </div>
-
         <div className="flex space-x-4">
           <Link to="/">
             <button
