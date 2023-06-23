@@ -4,6 +4,7 @@ import scrollReveal from 'scrollreveal';
 import { ThemeContext } from '../context/ThemeContext';
 import { projectsData } from '../data/projectsData';
 import Header from '../components/Header';
+import ButtonTop from '../components/ButtonTop';
 
 export default function Projects() {
   const { theme } = useContext(ThemeContext);
@@ -38,6 +39,7 @@ export default function Projects() {
   return (
     <div id="projects" className={`projects ${theme === 'light' ? 'light' : 'dark'}`} style={{ height: '100%' }}>
       <Header />
+      <ButtonTop />
       <div className="p-8 pt-24 mb-0 border border-gray-300 rounded-lg my-8 mx-4 md:mx-28">
         <p className="text-xl font-bold mb-4">Todos os Projetos</p>
         <div className={`grid ${isMobile ? 'grid-cols-1' : 'grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 scroll-reveal'} gap-8`}>
