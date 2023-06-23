@@ -25,7 +25,7 @@ export default function ButtonTop() {
   };
 
   return (
-    <div className={`${showButton ? 'fixed bottom-4 right-4 z-50' : 'hidden'}`}>
+    <div className={`transition-opacity duration-500 ${showButton ? 'fixed bottom-4 right-4 z-50 opacity-100' : 'fixed bottom-4 right-4 z-50 opacity-0'}`}>
       <button type="button" onClick={scrollToTop} className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg">
         <AiOutlineArrowUp />
       </button>
