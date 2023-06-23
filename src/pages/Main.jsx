@@ -8,6 +8,7 @@ import Projects from '../components/Projects';
 import Education from '../components/Education';
 import Experience from '../components/Experience';
 import Contacts from '../components/Contacts';
+import EmailForm from '../components/EmailForm';
 import Footer from '../components/Footer';
 import '../styles/Main.css';
 
@@ -24,6 +25,7 @@ export default function Main() {
       <Education />
       <Experience />
       <Contacts />
+      <EmailForm />
       <Footer />
     </div>
   );

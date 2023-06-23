@@ -34,7 +34,7 @@ export default function Contacts() {
 
   return (
     <div id="contacts" className="p-8 border border-gray-300 rounded-lg my-8 mx-4 md:mx-28">
-      <p className="text-xl font-bold mb-4">Contato</p>
+      <p className="text-xl font-bold mb-4">Informações de Contato e Residência</p>
       <div className={`flex ${isLargeScreen ? 'flex-wrap justify-center' : 'flex-col items-center'} gap-4 ${isLargeScreen ? 'scroll-reveal' : ''}`}>
         {Object.entries(contacts).map(([key, value]) => (
           <div key={key} className={`${isLargeScreen ? 'scroll-reveal' : ''}`}>
